@@ -20,10 +20,11 @@
     min-width: 80%; /* Réduit la largeur pour mieux centrer */
     box-sizing: border-box;
     align-items: center;
+    justify-content: center; /* Centre les items */
 }
 
 .carrousel-item img {
-    max-width: 50%;
+    max-width: 40%;
     max-height: 300px;
     border-radius: 5px;
     margin-right: 20px;
@@ -68,7 +69,8 @@
     font-size: 2em;
     padding: 10px;
     cursor: pointer;
-    display: none; /* Cacher les flèches par défaut */
+    opacity: 0; /* Cacher les flèches par défaut */
+    transition: opacity 0.3s ease; /* Animation pour l'apparition des flèches */
 }
 
 .carrousel-prev {
@@ -81,7 +83,7 @@
 
 .carrousel:hover .carrousel-prev,
 .carrousel:hover .carrousel-next {
-    display: block; /* Afficher les flèches lorsque la souris est sur le carrousel */
+    opacity: 1; /* Afficher les flèches lorsque la souris est sur le carrousel */
 }
 
 /* Styles existants */
@@ -93,7 +95,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #ff9800; /* Ajout de couleur vive */
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -108,7 +110,7 @@ header p {
 }
 
 nav.menu {
-    background-color: #444;
+    background-color: #ff9800; /* Ajout de couleur vive */
     padding: 10px;
 }
 
@@ -132,7 +134,7 @@ nav.menu ul li a {
 }
 
 nav.menu ul li a:hover {
-    background-color: #555;
+    background-color: #ffa726;
     border-radius: 5px;
 }
 
@@ -147,38 +149,3 @@ main {
 }
 
 .produit {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin: 10px;
-    padding: 20px;
-    text-align: center;
-    width: 300px;
-}
-
-.produit img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.produit h3 {
-    font-size: 1.5em;
-    margin: 10px 0;
-}
-
-.produit p {
-    font-size: 1em;
-    color: #666;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
