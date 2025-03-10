@@ -23,6 +23,35 @@ header p {
     font-size: 1.2em;
 }
 
+nav.menu {
+    background-color: #444;
+    padding: 10px;
+}
+
+nav.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav.menu ul li {
+    margin: 0 15px;
+}
+
+nav.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav.menu ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
 main {
     padding: 20px;
 }
