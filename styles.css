@@ -6,16 +6,18 @@
     overflow: hidden;
     padding: 20px 0;
     background-color: #f9f9f9;
+    position: relative;
 }
 
 .carrousel-container {
     display: flex;
+    justify-content: center; /* Centre le carrousel */
     transition: transform 0.5s ease-in-out;
 }
 
 .carrousel-item {
     display: flex;
-    min-width: 100%;
+    min-width: 80%; /* Réduit la largeur pour mieux centrer */
     box-sizing: border-box;
     align-items: center;
 }
@@ -53,6 +55,33 @@
 
 .carrousel-text a:hover {
     color: #0056b3;
+}
+
+.carrousel-prev,
+.carrousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2em;
+    padding: 10px;
+    cursor: pointer;
+    display: none; /* Cacher les flèches par défaut */
+}
+
+.carrousel-prev {
+    left: 10px;
+}
+
+.carrousel-next {
+    right: 10px;
+}
+
+.carrousel:hover .carrousel-prev,
+.carrousel:hover .carrousel-next {
+    display: block; /* Afficher les flèches lorsque la souris est sur le carrousel */
 }
 
 /* Styles existants */
