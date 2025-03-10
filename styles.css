@@ -11,20 +11,27 @@
 
 .carrousel-container {
     display: flex;
-    justify-content: center; /* Centre le carrousel */
+    justify-content: space-between; /* Espacement entre les items */
     transition: transform 0.5s ease-in-out;
 }
 
 .carrousel-item {
     display: flex;
-    min-width: 80%; /* Réduit la largeur pour mieux centrer */
+    min-width: 100%; /* Largeur pour afficher deux produits côte à côte */
     box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between; /* Espacement entre les produits */
+}
+
+.carrousel-product {
+    display: flex;
+    width: 48%; /* Largeur pour afficher deux produits côte à côte */
     align-items: center;
     justify-content: center; /* Centre les items */
 }
 
-.carrousel-item img {
-    max-width: 40%;
+.carrousel-product img {
+    max-width: 60%;
     max-height: 300px;
     border-radius: 5px;
     margin-right: 20px;
@@ -35,7 +42,7 @@
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 50%;
+    max-width: 40%;
 }
 
 .carrousel-text h3 {
