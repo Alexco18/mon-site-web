@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Boutique en Ligne</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenue dans Ma Boutique en Ligne</h1>
+        <p>Découvrez nos produits faits main avec amour.</p>
+    </header>
+    
+    <main>
+        <section id="produits">
+            <h2>Nos Produits</h2>
+            <div class="produit">
+                <img src="images/produit1.jpg" alt="Produit 1">
+                <h3>Produit 1</h3>
+                <p>Description du produit 1.</p>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="VOTRE_BOUTON_ID">
+                    <input type="submit" value="Acheter avec PayPal">
+                </form>
+            </div>
+            <div class="produit">
+                <img src="images/produit2.jpg" alt="Produit 2">
+                <h3>Produit 2</h3>
+                <p>Description du produit 2.</p>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="VOTRE_BOUTON_ID">
+                    <input type="submit" value="Acheter avec PayPal">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ma Boutique en Ligne. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
