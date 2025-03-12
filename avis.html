@@ -13,27 +13,7 @@
     <main>
         <section class="all-testimonials">
             <h2>Nos clients nous disent...</h2>
-            <div class="testimonial">
-                <p>"Produit de grande qualité, je suis ravi de mon achat !"</p>
-                <div class="rating">
-                    &#9733;&#9733;&#9733;&#9733;&#9734; <!-- 4 étoiles -->
-                </div>
-                <h4>- Jean Dupont</h4>
-            </div>
-            <div class="testimonial">
-                <p>"Service client exceptionnel et livraison rapide."</p>
-                <div class="rating">
-                    &#9733;&#9733;&#9733;&#9733;&#9733; <!-- 5 étoiles -->
-                </div>
-                <h4>- Marie Lafont</h4>
-            </div>
-            <div class="testimonial">
-                <p>"Les produits sont encore mieux que ce que j'espérais !"</p>
-                <div class="rating">
-                    &#9733;&#9733;&#9733;&#9733;&#9734; <!-- 4 étoiles -->
-                </div>
-                <h4>- Jacques Moreau</h4>
-            </div>
+            <!-- Les avis seront insérés ici par JavaScript -->
         </section>
     </main>
     <footer>
@@ -41,27 +21,25 @@
     </footer>
 
     <script>
-    document.getElementById('review-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        const review = event.target.review.value;
-        const rating = event.target.rating.value;
-        
-        // Ajouter le nouvel avis à la page "avis.html"
+    window.addEventListener('DOMContentLoaded', (event) => {
+        // Récupérer les avis stockés
+        let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
         const allTestimonials = document.querySelector('.all-testimonials');
-        const newTestimonial = document.createElement('div');
-        newTestimonial.classList.add('testimonial');
-        newTestimonial.innerHTML = `
-            <p>"${review}"</p>
-            <div class="rating">
-                ${Array.from({length: rating}, (_, i) => '&#9733;').join('')}
-                ${Array.from({length: 5 - rating}, (_, i) => '&#9734;').join('')}
-            </div>
-            <h4>- Nouveau Client</h4>
-        `;
-        allTestimonials.appendChild(newTestimonial);
-
-        // Réinitialiser le formulaire
-        event.target.reset();
+        
+        // Afficher chaque avis
+        reviews.forEach((reviewData) => {
+            const newTestimonial = document.createElement('div');
+            newTestimonial.classList.add('testimonial');
+            newTestimonial.innerHTML = `
+                <p>"${reviewData.review}"</p>
+                <div class="rating">
+                    ${Array.from({ length: reviewData.rating }, () => '&#9733;').join('')}
+                    ${Array.from({ length: 5 - reviewData.rating }, () => '&#9734;').join('')}
+                </div>
+                <h4>- Nouveau Client</h4>
+            `;
+            allTestimonials.appendChild(newTestimonial);
+        });
     });
     </script>
 </body>
