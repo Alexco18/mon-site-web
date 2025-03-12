@@ -87,7 +87,25 @@
             <h4>- Jacques Moreau</h4>
         </div>
     </div>
-    <button class="view-all" onclick="location.href='#lien-vers-la-page-de-tous-les-avis'">Voir tous les avis</button>
+    <button class="view-all" onclick="location.href='avis.html">Voir tous les avis</button>
+</section>
+
+    <section class="submit-review">
+    <h2>Donnez votre avis</h2>
+    <form id="review-form">
+        <textarea name="review" placeholder="Écrivez votre avis ici..." required></textarea>
+        <div class="rating">
+            <label for="rating">Votre note :</label>
+            <select name="rating" id="rating" required>
+                <option value="5">&#9733;&#9733;&#9733;&#9733;&#9733;</option>
+                <option value="4">&#9733;&#9733;&#9733;&#9733;&#9734;</option>
+                <option value="3">&#9733;&#9733;&#9733;&#9734;&#9734;</option>
+                <option value="2">&#9733;&#9733;&#9734;&#9734;&#9734;</option>
+                <option value="1">&#9733;&#9734;&#9734;&#9734;&#9734;</option>
+            </select>
+        </div>
+        <button type="submit">Soumettre</button>
+    </form>
 </section>
 
 
