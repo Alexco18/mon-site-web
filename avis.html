@@ -39,5 +39,30 @@
     <footer>
         <p>&copy; 2025 Ma Boutique en Ligne. Tous droits réservés.</p>
     </footer>
+
+    <script>
+    document.getElementById('review-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const review = event.target.review.value;
+        const rating = event.target.rating.value;
+        
+        // Ajouter le nouvel avis à la page "avis.html"
+        const allTestimonials = document.querySelector('.all-testimonials');
+        const newTestimonial = document.createElement('div');
+        newTestimonial.classList.add('testimonial');
+        newTestimonial.innerHTML = `
+            <p>"${review}"</p>
+            <div class="rating">
+                ${Array.from({length: rating}, (_, i) => '&#9733;').join('')}
+                ${Array.from({length: 5 - rating}, (_, i) => '&#9734;').join('')}
+            </div>
+            <h4>- Nouveau Client</h4>
+        `;
+        allTestimonials.appendChild(newTestimonial);
+
+        // Réinitialiser le formulaire
+        event.target.reset();
+    });
+    </script>
 </body>
 </html>
