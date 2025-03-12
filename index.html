@@ -125,11 +125,14 @@
    })();
 </script>
 
-    <script>
+  <script>
 document.getElementById('review-form').addEventListener('submit', function(event) {
     event.preventDefault();
     const review = event.target.review.value;
     const rating = event.target.rating.value;
+
+    console.log('Review:', review);
+    console.log('Rating:', rating);
 
     // Préparer les paramètres pour l'email
     const templateParams = {
@@ -137,7 +140,9 @@ document.getElementById('review-form').addEventListener('submit', function(event
         rating: rating
     };
 
-    emailjs.send('service_80qzljh', 'template_cz6k3it', templateParams)
+    console.log('Template Params:', templateParams);
+
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
         .then((response) => {
             console.log('SUCCESS!', response.status, response.text);
             alert('Avis soumis avec succès !');
@@ -149,6 +154,7 @@ document.getElementById('review-form').addEventListener('submit', function(event
         });
 });
 </script>
+
 
 
 </body>
