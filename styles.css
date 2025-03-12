@@ -201,7 +201,7 @@ footer {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: inline-block;
     max-width: 600px;
-    margin: 0 auto; /* Centrer le contenu */
+    margin: 20px auto; /* Centrer le contenu */
 }
 
 .testimonial-content {
@@ -236,3 +236,17 @@ footer {
     background-color: #0056b3;
 }
 
+.view-all {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.view-all:hover {
+    background-color: #0056b3;
+}
