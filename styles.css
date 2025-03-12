@@ -184,3 +184,53 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+.testimonials {
+    background-color: #ff9800; /* Couleur de fond en accord avec le reste du thème */
+    padding: 40px 20px;
+    border-radius: 10px; /* Bords arrondis du rectangle de fond */
+    text-align: center;
+    margin: 20px 0;
+}
+
+.testimonial {
+    background-color: #fff; /* Couleur de fond du rectangle blanc */
+    padding: 20px;
+    border-radius: 10px; /* Bords arrondis du rectangle blanc */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    max-width: 600px;
+}
+
+.testimonial-content {
+    margin: 20px 0;
+}
+
+.testimonial-content p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.rating {
+    color: #ff9800; /* Couleur des étoiles */
+    font-size: 1.5em;
+}
+
+.testimonial h4 {
+    margin: 10px 0;
+}
+
+.testimonial button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.testimonial button:hover {
+    background-color: #0056b3;
+}
+
