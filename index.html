@@ -125,5 +125,31 @@
    })();
 </script>
 
+    <script>
+document.getElementById('review-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const review = event.target.review.value;
+    const rating = event.target.rating.value;
+
+    // Préparer les paramètres pour l'email
+    const templateParams = {
+        review: review,
+        rating: rating
+    };
+
+    emailjs.send('service_80qzljh', 'template_cz6k3it', templateParams)
+        .then((response) => {
+            console.log('SUCCESS!', response.status, response.text);
+            alert('Avis soumis avec succès !');
+            // Réinitialiser le formulaire
+            event.target.reset();
+        }, (error) => {
+            console.log('FAILED...', error);
+            alert('Échec de la soumission de l\'avis.');
+        });
+});
+</script>
+
+
 </body>
 </html>
